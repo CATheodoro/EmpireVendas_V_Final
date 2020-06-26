@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{25EAF980-BCAF-4B69-96D1-DF0B03FBE8BC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>EmpireVendas</RootNamespace>
+    <AssemblyName>EmpireVendas</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>coroa-amarela-50x50.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CAMADAS\BLL\Categorias.cs" />
+    <Compile Include="CAMADAS\BLL\Clientes.cs" />
+    <Compile Include="CAMADAS\BLL\Funcionarios.cs" />
+    <Compile Include="CAMADAS\BLL\ItensVenda.cs" />
+    <Compile Include="CAMADAS\BLL\Produtos.cs" />
+    <Compile Include="CAMADAS\BLL\Vendas.cs" />
+    <Compile Include="CAMADAS\DAL\Categorias.cs" />
+    <Compile Include="CAMADAS\DAL\Clientes.cs" />
+    <Compile Include="CAMADAS\DAL\Conexao.cs" />
+    <Compile Include="CAMADAS\DAL\Funcionarios.cs" />
+    <Compile Include="CAMADAS\DAL\ItensVenda.cs" />
+    <Compile Include="CAMADAS\DAL\Produtos.cs" />
+    <Compile Include="CAMADAS\DAL\Vendas.cs" />
+    <Compile Include="CAMADAS\MODEL\Categorias.cs" />
+    <Compile Include="CAMADAS\MODEL\Clientes.cs" />
+    <Compile Include="CAMADAS\MODEL\ItensVenda.cs" />
+    <Compile Include="CAMADAS\MODEL\Produtos.cs" />
+    <Compile Include="CAMADAS\MODEL\Funcionarios.cs" />
+    <Compile Include="CAMADAS\MODEL\Vendas.cs" />
+    <Compile Include="Categorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Categorias.Designer.cs">
+      <DependentUpon>Categorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes.Designer.cs">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EspelhoVendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EspelhoVendas.Designer.cs">
+      <DependentUpon>EspelhoVendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Funcionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Funcionarios.Designer.cs">
+      <DependentUpon>Funcionarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaginaInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaginaInicial.Designer.cs">
+      <DependentUpon>PaginaInicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Produtos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Produtos.Designer.cs">
+      <DependentUpon>Produtos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RelatoriosVendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RelatoriosVendas.Designer.cs">
+      <DependentUpon>RelatoriosVendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RELATORIOS\Funcoes.cs" />
+    <Compile Include="RELATORIOS\RelGerais.cs" />
+    <Compile Include="Vendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vendas.Designer.cs">
+      <DependentUpon>Vendas.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Categorias.resx">
+      <DependentUpon>Categorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes.resx">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EspelhoVendas.resx">
+      <DependentUpon>EspelhoVendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Funcionarios.resx">
+      <DependentUpon>Funcionarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaginaInicial.resx">
+      <DependentUpon>PaginaInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produtos.resx">
+      <DependentUpon>Produtos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="RelatoriosVendas.resx">
+      <DependentUpon>RelatoriosVendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vendas.resx">
+      <DependentUpon>Vendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\EmpireVendas.CAMADAS.DAL.Categorias.datasource" />
+    <None Include="Properties\DataSources\EmpireVendas.CAMADAS.DAL.Funcionarios.datasource" />
+    <None Include="Properties\DataSources\EmpireVendas.CAMADAS.DAL.Produtos.datasource" />
+    <None Include="Properties\DataSources\EmpireVendas.CAMADAS.DAL.Vendas.datasource" />
+    <None Include="Properties\DataSources\EmpireVendas.CAMADAS.MODEL.Clientes.datasource" />
+    <None Include="Properties\DataSources\EmpireVendas.CAMADAS.MODEL.Funcionarios.datasource" />
+    <None Include="Properties\DataSources\EmpireVendas.CAMADAS.MODEL.ItensVenda.datasource" />
+    <None Include="Properties\DataSources\EmpireVendas.CAMADAS.MODEL.Produtos.datasource" />
+    <None Include="Properties\DataSources\EmpireVendas.CAMADAS.MODEL.Vendas.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="coroa-amarela-50x50.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
